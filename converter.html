@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    *{
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    body{
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+    }
+    #rupees{
+      border: 2px solid black;
+      height: 50px;
+      width: 100%;
+      margin-top: 20px;
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #fff;
+      border-radius: 10px;
+    }
+  button{
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 20px;
+    font-size: 18px;
+    box-shadow: 0px 0px 10px;
+
+  }
+  form{
+      border: 2px solid black;
+      text-align: center;
+      background-color: black;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px;
+  }
+  input{
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 18px;
+  }
+      
+      
+
+  </style>
+  <body>
+    <form action="">
+      <input id="amount" type="number" placeholder="Enter Amount" /><br>
+      <button onclick="Convert(event)" type="submit" >Convert QTR </button>
+      <button onclick="Usd(event)" type="submit" >Convert USD </button>
+      <div id="rupees"></div>
+    </form>
+
+    <script src="converter.js"></script>
+  </body>
+</html>

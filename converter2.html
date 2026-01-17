@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    form {
+        border: 2px solid black;
+        width: 350px;
+        text-align: center;
+        height: 220px;
+        border-radius: 10px;
+        background-color: black;
+
+    }
+
+    body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        background-color: rgb(58, 58, 58);
+    }
+
+    input {
+        padding: 5px;
+        border-radius: 5px;
+
+    }
+
+    button {
+        background-color: black;
+        color: white;
+        border: none;
+        padding: 10px;
+        border-radius: 10px;
+        margin-top: 20px;
+        font-size: 18px;
+        box-shadow: 0px 0px 10px;
+    }
+
+    select {
+        padding: 5px;
+        border-radius: 5px;
+
+    }
+
+    #result {
+        border: 2px solid black;
+        height: 60px;
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        color: white;
+    }
+
+    h2 {
+        margin: 10px 0px;
+        color: white;
+    }
+</style>
+
+<body>
+    <form>
+        <h2>Currency Converter</h2>
+
+        <input type="number" id="amount" placeholder="Enter amount" />
+
+        <select id="from">
+            <option value="USD">USD</option>
+            <option value="PKR">PKR</option>
+            <option value="EUR">EUR</option>
+            <option value="QTR">QTR</option>
+        </select>
+
+        <select id="to">
+            <option value="PKR">PKR</option>
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+            <option value="QTR">QTR</option>
+
+        </select>
+
+        <button onclick="convert(event)">Convert</button>
+
+        <h3 id="result"></h3>
+    </form>
+
+
+
+</body>
+<script src="converter2.js"></script>
+
+</html>

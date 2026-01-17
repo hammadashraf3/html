@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: Helvetica, sans-serif;
+        }
+
+        .main {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            position: relative;
+        }
+
+        p {
+            width: 1000px;
+            text-align: justify;
+            font-size: 20px;
+            margin-top: 25px;
+        }
+
+        h1 {
+            font-size: 50px;
+        }
+
+        button {
+            background-color: black;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 10px;
+            margin-top: 25px;
+        }
+
+        .buttons {
+            position: absolute;
+            top: 0;
+            right: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <h1 class="head">HELLO WORLD</h1>
+        <p class="paragraph">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel velit obcaecati rem debitis
+            commodi fugit eaque nostrum, modi nisi molestiae quae, fuga ullam omnis. Ex reprehenderit ducimus quas
+            eveniet repellat enim architecto tempora ad doloribus pariatur at, consectetur dolore excepturi id impedit
+            sint libero qui. Hic perferendis ut similique inventore! Lorem ipsum dolor sit amet, consectetur adipisicing
+            elit. Consectetur consequatur aut repellendus assumenda, dicta ratione eum tempore facere ab omnis.</p>
+        <button class="btn">GET NOW</button>
+        <div class="buttons">
+            <button class="btn1" onclick="Darkmode()">Dark mode</button>
+            <button class="btn2" onclick="Lightmode()">Light mode</button>
+        </div>
+    </div>
+
+</body>
+<script src="theme.js"></script>
+
+</html>
