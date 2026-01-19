@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: rgb(94, 94, 255);
+    }
+
+    .calculater {
+        border: 2px solid black;
+        padding: 10px;
+        border-radius: 10px;
+        background-color: black;
+    }
+
+    #display {
+        padding: 17px 10px;
+        margin-left: 10px;
+        border-radius: 10px;
+        margin-top: 5px;
+        font-size: 30px;
+        width: 230px;
+        text-align: right;
+    }
+
+    button {
+        padding: 20px;
+        margin: 2px;
+        border-color: gainsboro;
+        border-radius: 10px;
+        font-size: 15px;
+
+    }
+
+    .buttons {
+        /* border: 2px solid black; */
+        padding: 5px;
+        margin-bottom: 10px;
+
+    }
+
+    .abc {
+        margin-left: 5px;
+    }
+
+    .xyz {
+        width: 135px;
+        background-color: rgb(255, 136, 0);
+        color: white;
+        border-color: rgb(255, 136, 0);
+        font-size: 20px;
+
+    }
+
+    .btn {
+        width: 70px;
+        background-color: rgb(255, 136, 0);
+        color: white;
+        border-color: rgb(255, 136, 0);
+        font-size: 15px;
+
+
+    }
+
+    .btn1 {
+        width: 69px;
+        margin-left: 4px;
+        background-color: rgb(255, 136, 0);
+        color: white;
+        border-color: rgb(255, 136, 0);
+
+    }
+
+    .btn2 {
+        width: 52px;
+        margin-left: 5px;
+    }
+
+    .btn3 {
+        width: 50px;
+        position: relative;
+        height: 55px;
+    }
+
+    #btn4 {
+        width: 50px;
+    }
+
+    span {
+        position: absolute;
+        left: 9px;
+        top: 19px;
+    }
+
+    .btn5 {
+        width: 50px;
+    }
+
+    #abc {
+        background-color: red;
+        color: white;
+        border-color: red;
+
+    }
+
+    .qq {
+        position: relative;
+        left: -5px;
+        top: 0;
+    }
+</style>
+
+<body>
+    <div class="calculater">
+        <input type="text" id="display">
+        <div class="buttons">
+            <button id="abc" class="abc" onclick="Clear()">C</button>
+            <button class="btn3" onclick="Delete()"> <span>DEL</span></button>
+            <button class="btn5" onclick="button('.')">.</button>
+            <button class="btn1" onclick="button('/')">/</button><br>
+
+            <button class="abc" onclick="button('7')">7</button>
+            <button onclick="button('8')">8</button>
+            <button onclick="button('9')">9</button>
+            <button class="btn" onclick="button('*')">*</button><br>
+
+            <button class="btn2" class="abc" onclick="button('4')">4</button>
+            <button onclick="button('5')">5</button>
+            <button onclick="button('6')">6</button>
+            <button class="btn" onclick="button('-')">-</button><br>
+
+            <button class="abc" onclick="button('1')">1</button>
+            <button onclick="button('2')">2</button>
+            <button onclick="button('3')">3</button>
+            <button class="btn" onclick="button('+')">+</button><br>
+
+            <button id="btn4" class="abc" onclick="button('00')"><span class="qq">00</span></button>
+            <button onclick="button('0')">0</button>
+            <button class="xyz" onclick="Calculate()">=</button>
+        </div>
+    </div>
+
+</body>
+<script>
+    let display = document.getElementById("display")
+
+    function button(input) {
+        display.value += input
+    }
+
+    function Calculate() {
+        display.value = eval(display.value)
+    }
+
+    function Clear() {
+        display.value = ""
+    }
+
+    function Delete() {
+        display.value = display.value.slice(0, -1)
+    }
+</script>
+
+</html>
